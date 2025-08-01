@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3 class="section-title text-center">Write a Review</h3>
+<form method="post" class="form-box">
+  <select name="book_id" class="form-control my-2">
+    {% for book in books %}
+      <option value="{{ book.id }}">{{ book.title }} by {{ book.author }}</option>
+    {% endfor %}
+  </select>
+  <input type="number" name="rating" class="form-control my-2" placeholder="Rating (1-5)" min="1" max="5" required>
+  <textarea name="comment" class="form-control my-2" placeholder="Write your review..." required></textarea>
+  <button class="btn btn-info">Submit Review</button>
+</form>
+{% endblock %}
+

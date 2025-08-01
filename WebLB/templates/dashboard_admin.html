@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h3 class="section-title text-center">Welcome, Admin {{ name }}</h3>
+<div class="form-box text-center">
+  <a href="{{ url_for('add_user') }}" class="btn btn-outline-primary m-2">Add User</a>
+  <a href="{{ url_for('add_book') }}" class="btn btn-outline-success m-2">Add Book</a>
+  <a href="{{ url_for('list_users') }}" class="btn btn-outline-primary m-2">View All Users</a>
+  <a href="{{ url_for('list_books') }}" class="btn btn-outline-secondary m-2">View All Books</a>
+  <a href="{{ url_for('view_reservations') }}" class="btn btn-outline-secondary m-2">View Reservations</a>
+  <a href="{{ url_for('view_reviews') }}" class="btn btn-outline-dark m-2">View All Reviews</a>
+  <a href="{{ url_for('reserve') }}" class="btn btn-outline-warning m-2">Reserve Book</a>
+  <a href="{{ url_for('review') }}" class="btn btn-outline-info m-2">Write Review</a>
+  <a href="{{ url_for('fine') }}" class="btn btn-outline-danger m-2">Calculate Fine</a>
+  <a href="{{ url_for('qr') }}" class="btn btn-outline-dark m-2">Generate QR</a>
+  <a href="{{ url_for('logout') }}" class="btn btn-secondary m-2">Logout</a>
+</div>
+{% endblock %}
+    

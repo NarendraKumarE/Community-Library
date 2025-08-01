@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3 class="section-title text-center">Calculate Fine</h3>
+<form method="post" class="form-box">
+  <label>Issue Date:</label>
+  <input type="date" name="issue" class="form-control my-2" required>
+
+  <label>Return Date:</label>
+  <input type="date" name="return" class="form-control my-2" required>
+
+  <button class="btn btn-warning">Calculate</button>
+</form>
+
+{% if error %}
+  <div class="alert alert-danger mt-3">{{ error }}</div>
+{% endif %}
+
+{% if fine is not none and not error %}
+  <div class="mt-3 fine-display">
+    <p><strong>Fine Amount:</strong> ₹{{ fine }}</p>
+  </div>
+{% endif %}
+{% endblock %}

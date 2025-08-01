@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3 class="section-title text-center">All Book Reviews</h3>
+<div class="form-box">
+  {% set current_book = None %}
+  {% for review in reviews %}
+    {% if current_book != review.book_title %}
+      {% if not loop.first %}<hr>{% endif %}
+      <h5>{{ review.book_title }}</h5>
+      {% set current_book = review.book_title %}
+    {% endif %}
+    <p>⭐ {{ review.rating }} — {{ review.comment }}</p>
+  {% endfor %}
+</div>
+{% endblock %}

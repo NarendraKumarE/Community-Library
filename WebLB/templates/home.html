@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="hero-section">
+  <div class="overlay text-center text-white">
+    <h1 class="display-5 fw-bold">WHAT’S ALL THE LIBRARIA?</h1>
+    <p class="lead">
+      Libraria gives you access to <strong>Audiobooks</strong>, <strong>eBooks</strong>, <strong>Music</strong>,
+      <strong>Movies</strong> and <strong>Comics</strong>.
+    </p>
+    <form class="search-form d-flex justify-content-center align-items-center flex-wrap">
+      <input type="text" placeholder="Search by Keyword" class="form-control m-2 w-25">
+      <input type="text" placeholder="Search the Catalog" class="form-control m-2 w-25">
+      <select class="form-control m-2 w-25">
+        <option>All Categories</option>
+        <option>Books</option>
+        <option>Ebooks</option>
+      </select>
+      <button class="btn btn-primary m-2">Search</button>
+    </form>
+  </div>
+</div>
+
+<div class="category-section d-flex flex-wrap justify-content-center">
+  <div class="category-box bg-warning text-white">📚<br>BOOKS</div>
+  <div class="category-box bg-success text-white">💻<br>EBOOKS</div>
+  <div class="category-box bg-info text-white">💿<br>DVDS</div>
+  <div class="category-box bg-danger text-white">📰<br>MAGAZINES</div>
+  <div class="category-box bg-primary text-white">🎧<br>AUDIO</div>
+  <div class="category-box bg-cyan text-white">📲<br>EAUDIO</div>
+</div>
+{% endblock %}

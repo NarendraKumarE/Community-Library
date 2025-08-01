@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3 class="section-title text-center">Add Book</h3>
+<form method="post" class="form-box">
+  <input name="title" class="form-control my-2" placeholder="Title" required>
+  <input name="author" class="form-control my-2" placeholder="Author" required>
+  <input name="genre" class="form-control my-2" placeholder="Genre" required>
+  <button class="btn btn-success">Add Book</button>
+</form>
+{% endblock %}

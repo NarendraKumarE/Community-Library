@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3 class="section-title text-center">QR Code for Book</h3>
+<form method="post" class="form-box">
+  <input name="book_id" class="form-control my-2" placeholder="Book ID" required>
+  <button class="btn btn-dark">Generate QR</button>
+</form>
+{% if qr_path %}
+<div class="text-center mt-3">
+  <img src="/{{ qr_path }}" class="img-fluid qr-image" alt="QR Code">
+</div>
+{% endif %}
+{% endblock %}

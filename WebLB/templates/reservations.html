@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3 class="section-title text-center">Reserved Books</h3>
+<div class="form-box">
+  <ul class="list-group">
+    {% for r in reservations %}
+    <li class="list-group-item d-flex justify-content-between">
+      <span>
+        <strong>{{ r.book_title }}</strong> reserved by <em>{{ r.user_name }}</em>
+      </span>
+      <a href="{{ url_for('remove_reservation', res_id=r.res_id) }}" class="btn btn-sm btn-danger">Remove</a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}

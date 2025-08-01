@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3 class="section-title text-center">All Users</h3>
+<div class="form-box">
+  <ul class="list-group">
+    {% for user in users %}
+    <li class="list-group-item">
+      <strong>{{ user.name }}</strong> — {{ user.email }} [{{ user.role }}]
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}
+
